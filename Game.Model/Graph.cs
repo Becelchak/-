@@ -28,6 +28,11 @@ namespace Game.Model
 			Node.Disconnect(edge);
 		}
 
+		public void Add(Node node)
+		{
+			nodes=nodes.Select(x=>x).Append(node).ToArray();
+		}
+
 		public IEnumerable<Edge> Edges
 		{
 			get
